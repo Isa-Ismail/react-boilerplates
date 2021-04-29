@@ -8,7 +8,7 @@ import Individual from './Components/Individual'
 import Card from './Components/play/cards'
 import Footer from './Components/Footer'
 
-const App = ()=>{
+const App = ()=> {
     
    return( 
             <Switch> 
