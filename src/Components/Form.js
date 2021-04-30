@@ -8,6 +8,7 @@ function Form() {
     name:'',
     age:'',
     job:'',
+    wages:'',
     email:'',
     password:''
 })
@@ -15,7 +16,7 @@ function Form() {
   const dispatch = useDispatch();
 
   const Handler =(e)=>{
-    if(e.target.name==='age'){
+    if(e.target.name==='age' || e.target.name === 'wages'){
       const name= e.target.name
       const value= e.target.value
       setUser(user=>{ return {...user, [name]:parseInt(value)} })
@@ -27,13 +28,14 @@ function Form() {
   }
   const Wow = (e) =>{
     e.preventDefault();
-    if(user.name && user.age && user.job && user.email && user.password){
-      let newUser = {...user, id: new Date().getTime().toString()}
+    if(user.name && user.age && user.job && user.wages && user.email && user.password){
+      let newUser = {...user, id: new Date().getTime().toString(), total:0}
       dispatch({type:'SUBMIT', payload: {set:newUser}})
       setUser({
         name:'',
         age:'',
         job:'',
+        wages:'',
         email:'',
         password:''
     })
@@ -62,6 +64,8 @@ function Form() {
                   <input type='text' name='age' value={user.age} onChange={Handler}/>
                   <label>Job</label>
                   <input type='text' name='job' value={user.job} onChange={Handler}/>
+                  <label>wages</label>
+                  <input type='text' name='wages' value={user.wages} onChange={Handler}/>
                   <label>Email</label>
                   <input type='text' name='email' value={user.email} onChange={Handler}/>
                   <label>Password</label>

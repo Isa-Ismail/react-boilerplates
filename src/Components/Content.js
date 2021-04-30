@@ -30,7 +30,7 @@ const Content = () => {
                 data.map( data => {
                     const {name, age, job, id} = data
                      return(
-                        <div key={id} className="card">
+                        <div key="{id}" className="card">
                             <div className="face face1">
                                 <div className="content">
                                 <img src="https://github.com/Jhonierpc/WebDevelopment/blob/master/CSS%20Card%20Hover%20Effects/img/design_128.png?raw=true" />

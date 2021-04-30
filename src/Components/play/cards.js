@@ -1,5 +1,4 @@
 import React from 'react'
-import './play_css/cards.css'
 const cards = () => {
     return (
 

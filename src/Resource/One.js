@@ -14,12 +14,14 @@ const INITIAL_STATE = {
 export const One = (state = INITIAL_STATE, action) => {
     switch (action.type) {
 
-        
         case 'CART':
+
             return {
                 ...state,
+
                 cart: [...state.cart, action.payload.item],
-                total: state.total + action.payload.item.age
+                
+                total: state.total + action.payload.item.wages,
             };  
             
         default:

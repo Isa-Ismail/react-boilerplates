@@ -6,9 +6,11 @@ const INITIAL_STATE = {
     name:'Fahim',
     age:21,
     job:'Senior Software Engineer',
+    wages:12000,
     email:'fahimismail75.scc@gmail.com',
     password:'janina',
-    id:new Date().getTime().toString()
+    id:new Date().getTime().toString(),
+    total:0
         }
           ]
 };

@@ -12,10 +12,12 @@ const Individual = () => {
     useEffect(() => {
         setData( item.find(e => e.id === id))
     },[])
-   
+    const {age, name, job} = data
     return (
         <div>
-            
+            <h3>{name}</h3>
+            <p>{age}</p>
+            <p>{job}</p>
         </div>
     )
 }

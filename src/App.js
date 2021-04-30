@@ -7,6 +7,7 @@ import Content from './Components/Content';
 import Individual from './Components/Individual'
 import Card from './Components/play/cards'
 import Footer from './Components/Footer'
+import Home from './Components/Home'
 
 const App = ()=> {
     
@@ -16,14 +17,14 @@ const App = ()=> {
                  <Nav />
                 
                  <Route exact path='/'>
-                    <Cards />
+                    <Home />
                  </Route>
 
                  <Route path='/form'>
                     <Form />
                  </Route>
                  
-                 <Route path='/cards'>
+                 <Route path='/products'>
                     <Cards />
                  </Route>          
                  
@@ -38,11 +39,12 @@ const App = ()=> {
                  <Route path='/indi/:id'>
                     <Individual />
                  </Route> 
-                
-               <Footer />
+
+                 <br/><br/><br/><br/><br/><br/><br/><br/>
+                 
+                 <Footer />
                
                </div>
-
             </Switch> 
     )
 }

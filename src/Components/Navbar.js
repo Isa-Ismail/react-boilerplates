@@ -73,7 +73,7 @@ export default function BackToTop(props) {
         <Link style={{color:'#333'}} to='/content'><Typography variant="h6">Officials</Typography></Link>
         </Toolbar>
         <Toolbar>
-          <Link style={{color:'#333'}} to='/cards'><Typography variant="h6">Services</Typography></Link>
+          <Link style={{color:'#333'}} to='/products'><Typography variant="h6">Products</Typography></Link>
         </Toolbar>
         <Toolbar>
         <Link style={{color:'#333'}} to='/form'><Typography variant="h6">Recruit</Typography></Link>
