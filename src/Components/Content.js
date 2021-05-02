@@ -24,13 +24,12 @@ const Content = () => {
     return (
         <>
         <div style={{display:'flex', justifyContent:'left'}}>
-        <input type='text' placeholder='Search by name' name = 'search' value = {search} onChange={(e)=>setSearch( search => e.target.value)} style={{padding:'.5rem', marginLeft:'3rem', borderRadius:'.3em', backgroundColor:"white",border:'solid .2em black' ,color:'crimson'}}/><br /><br />
+        <input type='text' placeholder='Search by name' name = 'search' value = {search} onChange={(e)=>setSearch(e.target.value)} style={{padding:'.5rem', marginLeft:'3rem', borderRadius:'.3em', backgroundColor:"white",border:'solid .2em black' ,color:'crimson'}}/><br /><br />
         </div>
         <button className='btn' onClick={()=>dispatch({type:'SORT_BY_AGE'})}>Sort by age</button>
         <div style={{display:'flex', flexWrap:'wrap', justifyContent:'center'}}>
 
             {
-            
               data.filter(e=>e.name.toLowerCase().indexOf(search.toLowerCase())!== -1).map( data => {
                     const {name, age, job, id} = data
                      return(
