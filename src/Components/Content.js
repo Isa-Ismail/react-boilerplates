@@ -5,7 +5,7 @@ const Content = () => {
     
     const data = useSelector(data=>data.Two.user)
     const dispatch = useDispatch()
-    
+    const [search, setSearch] = useState('')
     // const url = ``
     // const api = async () =>{
     //     const res = await fetch (url);
@@ -19,15 +19,19 @@ const Content = () => {
     //     api()
     // },[])
     
-    
+    console.log(search)
 
     return (
         <>
+        <div style={{display:'flex', justifyContent:'left'}}>
+        <input type='text' placeholder='Search by name' name = 'search' value = {search} onChange={(e)=>setSearch( search => e.target.value)} style={{padding:'.5rem', marginLeft:'3rem', borderRadius:'.3em', backgroundColor:"white",border:'solid .2em black' ,color:'crimson'}}/><br /><br />
+        </div>
         <button className='btn' onClick={()=>dispatch({type:'SORT_BY_AGE'})}>Sort by age</button>
         <div style={{display:'flex', flexWrap:'wrap', justifyContent:'center'}}>
 
             {
-                data.map( data => {
+            
+              data.filter(e=>e.name.toLowerCase().indexOf(search.toLowerCase())!== -1).map( data => {
                     const {name, age, job, id} = data
                      return(
                         <div key="{id}" className="card">
