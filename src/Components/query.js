@@ -8,7 +8,7 @@ const Query = () => {
   const [ page, setPage ] = useState(1);
 
   
-    const fetchPlanets = async () => {
+    const fetchPlanets = async (key, page) => {
         const res = await fetch(`http://swapi.dev/api/planets/?page=${page}`);
         const data= await res.json();
         return data;
