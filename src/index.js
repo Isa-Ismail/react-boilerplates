@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import {createStore} from 'redux'
 import {Provider} from 'react-redux'
 import { BrowserRouter as Router} from 'react-router-dom'
+import reportWebVitals from "./reportWebVitals";
 import All from './Resource/Reducers'
 import './index.css'
 //import './BootStrap/bootstrap.min.css'
