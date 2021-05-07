@@ -1,23 +1,26 @@
 import React, {useState, useEffect} from 'react'
 import { useSelector, useDispatch} from 'react-redux'
 import {Link} from 'react-router-dom'
+
 const Content = () => {
     
     const data = useSelector(data=>data.Two.user)
     const dispatch = useDispatch()
     const [search, setSearch] = useState('')
-    // const url = ``
-    // const api = async () =>{
-    //     const res = await fetch (url);
-    //     const dat = await res.json ();
-    //     dispatch({type:'ADD_PRODUCT', payload: dat})
-    // }
-    
-    // console.log(data)
+    const [loop, setLoop] = useState('')
 
-    // useEffect(() => {
-    //     api()
-    // },[])
+    const url = `http://swapi.dev/api/planets/?page=4`
+    const api = async () =>{
+        const res = await fetch (url);
+        const dat = await res.json ();
+        dispatch({type:'ADD_PRODUCT', payload: dat})
+        setLoop(dat)
+    }
+    console.log(loop)
+
+    useEffect(() => {
+        api()
+    },[])
     
     console.log(search)
 
